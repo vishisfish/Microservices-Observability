@@ -10,7 +10,7 @@ This project is a centralized monitoring and alerting system for Kubernetes micr
 ## Team Members
 
 - [@vishisfish](https://www.github.com/vishisfish) - 20PC39
-- [@vidhulpraveen3](https://www.github.com/vidhulpraveen3) - 20PC38
+- [@vidhulpraveen](https://www.github.com/vidhulpraveen) - 20PC38
 
 
 ## Documentation

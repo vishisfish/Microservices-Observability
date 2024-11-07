@@ -1,0 +1,36 @@
+config:
+  ## The datasource properties on config are passed through helm tpl function.
+  ## ref: https://helm.sh/docs/developing_charts/#using-the-tpl-function
+  datasource:
+    # Specify one of both datasource or datasourceSecret
+    host: '10.1.0.215'
+    user: postgres
+    password: f2sNPt0wrf
+
+# serviceMonitor:
+#   # When set true then use a ServiceMonitor to configure scraping
+#   enabled: true
+#   labels: 
+#     release: grafana
+
+prometheusRule:
+  enabled: true
+  additionalLabels: {}
+  namespace: "prometheus"
+  rules: 
+    # These are just examples rules, please adapt them to your needs.
+    # Make sure to constraint the rules to the current prometheus-postgres-exporter service.
+    - alert: HugeReplicationLag
+      expr: pg_replication_lag{service="{{ template "prometheus-postgres-exporter.fullname" . }}"} / 3600 > 1
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        description: replication for {{ template "prometheus-postgres-exporter.fullname" . }} PostgreSQL is lagging by {{ "{{ $value }}" }} hour(s).
+        summary: PostgreSQL replication is lagging by {{ "{{ $value }}" }} hour(s).
+
+
+service:
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/port: '9187'

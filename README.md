@@ -1,10 +1,9 @@
 # Centralized Observability and Alerting Dashboard for Microservices in Kubernetes
 
-##Project Flow
+## Project Flow
 ![alt text](https://github.com/vishisfish/Microservices-Observability/blob/main/screenshots/Flow.png?raw=true)
 
-##Description
-
+## Description
 
 This project is a centralized monitoring and alerting system for Kubernetes microservices. It uses Prometheus to collect metrics, Alertmanager to trigger alerts, and Slack for real-time notifications. Grafana dashboards provide clear visualizations of microservice performance, ensuring efficient monitoring, quick issue detection, and easy scalability.
 

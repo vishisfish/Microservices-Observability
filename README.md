@@ -7,10 +7,10 @@
 
 This project is a centralized monitoring and alerting system for Kubernetes microservices. It uses Prometheus to collect metrics, Alertmanager to trigger alerts, and Slack for real-time notifications. Grafana dashboards provide clear visualizations of microservice performance, ensuring efficient monitoring, quick issue detection, and easy scalability.
 
-## Authors
+## Team Members
 
-- [@vishisfish](https://www.github.com/vishisfish)
-- [@vidhulpraveen3](https://www.github.com/vidhulpraveen3)
+- [@vishisfish](https://www.github.com/vishisfish) - 20PC39
+- [@vidhulpraveen3](https://www.github.com/vidhulpraveen3) - 20PC38
 
 
 ## Documentation
